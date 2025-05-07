@@ -518,8 +518,8 @@ async def txt_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                cc = f'[——— INDEX {str(count).zfill(3)}  ———]({link0})\n\n** Title :** `{name1}`**-**  {CR} .mp4\n\n** BATCH :** {b_name}\n\n**📥 Downloaded By :** {CR}'
-                cc1 = f'[——— INDEX {str(count).zfill(3)}  ———]({link0})\n\n**📁 Title :** `{name1}`**-**  {CR} .pdf\n\n** BATCH :** {b_name}\n\n**📥 Downloaded By :** {CR}'
+                cc = f'[INDEX {str(count).zfill(3)}]({link0})\n\n** Title :** `{name1}`**-**  {CR} .mp4\n\n** Batch :** {b_name}\n\n**📥 Downloaded By :** {CR}'
+                cc1 = f'[——— INDEX {str(count).zfill(3)}  ———]({link0})\n\n**📁 Title :** `{name1}`**-**  {CR} .pdf\n\n** Batch :** {b_name}\n\n**📥 Downloaded By :** {CR}'
                 cczip = f'[——— ✦ {str(count).zfill(3)} ✦ ———]({link0})\n\n**📁 Title :** `{name1}`\n**├── Extention :**  {CR} .zip\n\n**📚 Course :** {b_name}\n\n**📥 Downloaded By :** {CR}'
                 ccimg = f'[——— ✦ {str(count).zfill(3)} ✦ ———]({link0})\n\n**🖼️ Title :** `{name1}`\n**├── Extention :**  {CR} .jpg\n\n**📚 Course :** {b_name}\n\n**📥 Downloaded By :** {CR}'
                 ccm = f'[——— ✦ {str(count).zfill(3)} ✦ ———]({link0})\n\n**🎵 Title :** `{name1}`\n**├── Extention :**  {CR} .mp3\n\n**📚 Course :** {b_name}\n\n**📥 Downloaded By :** {CR}'
@@ -729,7 +729,7 @@ async def txt_handler(bot: Client, m: Message):
                     time.sleep(1)
                 
             except Exception as e:
-                await m.reply_text(f'💬**direct Link To Play**\n**Name** =>> `{str(count).zfill(3)} {name1}`\n**Url** =>> {link0}', disable_web_page_preview=True)
+                await m.reply_text(f'💬**direct Link To Play**\n**Name** =>> `{str(count).zfill(3)} {name1}`\n\n**Url** =>> {link0}', disable_web_page_preview=True)
                 count += 1
                 failed_count += 1
                 continue
